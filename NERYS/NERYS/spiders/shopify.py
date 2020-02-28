@@ -3,6 +3,7 @@ import copy
 import json
 import logging
 import re
+from collections import namedtuple
 
 import scrapy
 from colorama import Fore
@@ -28,7 +29,7 @@ class ShopifySpider(scrapy.Spider):
             self.keywords = [keyword.strip() for keyword in f]
         # 2). 加载shopify网址并预处理
         with open('doc/shopify-sites.txt') as f:
-            urls = [url.strip() + '/collections/all/products.atom' for url in f]
+            urls = [url.strip() + '/collections/all/footwear.atom' for url in f]
         # 3). 爬取加载的所有shopify网址，并调用parse函数解析页面内容。
         for url in urls:
             yield Request(url=url, callback=self.parse)
@@ -62,13 +63,14 @@ class ShopifySpider(scrapy.Spider):
         # 2). 解析响应的json数据
         json_content = json.loads(response.text)
         # 3). 基于字典的key-value解析商品的详细信息
-        # todo: Get Product Stock
         product = json_content.get('product')
         if product:
             # 默认获取的商品描述时html标签， 基于正则表达式删除标签，只留下文本信息。
             no_tag_pattern = re.compile(r'<.*?>')
-            description = re.sub(no_tag_pattern, '', product.get('body_html'))
-            item['description'] = description.replace('\n', '').strip()
+            body_html =  product.get('body_html')
+            if body_html:
+                description = re.sub(no_tag_pattern, '', body_html)
+                item['description'] = description.replace('\n', '').strip()
             item['tags'] = product.get('tags')
             # 4). 根据商品的名称和商品标签与关键字对比， 筛选出需要的商品信息并返回。
             # Check if the keywords are in the product's name or tags
@@ -80,12 +82,19 @@ class ShopifySpider(scrapy.Spider):
                     product_found = True
                     break
             # 5). 符合筛选条件的商品信息进一步解析；
+            # product_found = True
             if product_found:
                 variants = {}
+                all_size_stock = 0
                 for variant in product.get('variants'):
                     size = variant.get('title')
                     price = variant.get('price')
-                    variants[size] = price
+                    stock = variant.get('inventory_quantity', 0)
+                    all_size_stock += stock
+                    if stock:
+                        variants[size] = {'price': price, 'stock': stock}
                 item['price'] = json.dumps(variants)
+                item['stock'] = all_size_stock  # 总库存量
+                # print(variants)
                 # Request 函数传递 item 时，使用的是浅复制（对象的字段值被复制时，字段引用的对象不会被复制
                 return copy.deepcopy(item)

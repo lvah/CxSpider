@@ -17,3 +17,4 @@ class NerysItem(scrapy.Item):
     price = scrapy.Field()              # 商品价格
     stock = scrapy.Field()              # 商品库存量
     tags= scrapy.Field()                # 商品标签
+    status = scrapy.Field()             # 商品状态: 1-上新，2-补货，3-售罄

@@ -1,0 +1,84 @@
+2020-02-28 19:27:33 [scrapy.utils.log] INFO: Scrapy 1.8.0 started (bot: NERYS)
+2020-02-28 19:27:33 [scrapy.utils.log] INFO: Versions: lxml 4.4.1.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.7.0, Python 3.7.5 (default, Oct 31 2019, 15:18:51) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.18362-SP0
+2020-02-28 19:27:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'NERYS', 'CONCURRENT_REQUESTS': 100, 'CONCURRENT_REQUESTS_PER_DOMAIN': 100, 'CONCURRENT_REQUESTS_PER_IP': 100, 'COOKIES_ENABLED': False, 'DOWNLOAD_TIMEOUT': 50, 'LOG_FILE': 'log\\scrapy_2020_02_28.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'NERYS.spiders', 'RETRY_TIMES': 5, 'SPIDER_MODULES': ['NERYS.spiders']}
+2020-02-28 19:27:33 [scrapy.extensions.telnet] INFO: Telnet Password: 15e22d2bae002aad
+2020-02-28 19:27:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-02-28 19:27:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['NERYS.middlewares.GetFailedUrl',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-02-28 19:27:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'NERYS.middlewares.RandomUserAgentMiddleware',
+ 'NERYS.middlewares.NerysSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-02-28 19:27:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['NERYS.pipelines.SqlitePipeline']
+2020-02-28 19:27:34 [scrapy.core.engine] INFO: Spider opened
+2020-02-28 19:27:34 [root] INFO: Connect sqlite successful
+2020-02-28 19:27:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-02-28 19:27:34 [shopify] INFO: Spider opened: shopify
+2020-02-28 19:27:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-02-28 19:27:36 [root] INFO: Product <1990 SE Mountain Jacket Sunbaked Red / Black> is restocking, the restock count is 2
+2020-02-28 19:27:37 [root] INFO: Product <Vault by Vans OG Classic Slipon by Jim Goldberg “Static”> is restocking, the restock count is 7
+2020-02-28 19:27:37 [root] INFO: Product <OG Classic Slip-On LX Checkerboard U> is restocking, the restock count is 18
+2020-02-28 19:27:37 [root] INFO: Product <Ultrarange Exo LX Marshmallow> is restocking, the restock count is 6
+2020-02-28 19:27:37 [root] INFO: Product <R.Y.V. Sweatpants Black> is restocking, the restock count is 3
+2020-02-28 19:27:37 [root] INFO: Product <Ultrarange Exo LX Asphalt> is restocking, the restock count is 7
+2020-02-28 19:27:37 [root] INFO: Product <Vault by Vans Chore Coat by Jim Goldberg Black (Acid washed denim)> is restocking, the restock count is 1
+2020-02-28 19:27:37 [root] INFO: Product <Vans Shoe Care Travel Kit White> is restocking, the restock count is 5
+2020-02-28 19:27:38 [root] INFO: Product <Vault by Vans OG Sk8 Hi LX by Jim Goldberg “Black Leather”> is restocking, the restock count is 7
+2020-02-28 19:27:38 [root] INFO: Product <Vault by Vans Graphic Tee by Jim Goldberg Black> is restocking, the restock count is 3
+2020-02-28 19:27:38 [root] INFO: Product <Vault by Vans Graphic Tee by Jim Goldberg White> is restocking, the restock count is 3
+2020-02-28 19:27:38 [root] INFO: Product <Vault by Vans OG Classic Slipon by Jim Goldberg “Black Wall”> is restocking, the restock count is 7
+2020-02-28 19:27:38 [root] INFO: Product <OG Authentic LX White U> is restocking, the restock count is 18
+2020-02-28 19:27:38 [root] INFO: Find keyword <Hoodie> in product <Vans X Sandy Liang Sunday Hoodie Black W>
+2020-02-28 19:27:38 [root] INFO: Product <Vans X Sandy Liang Sunday Hoodie Black W> is restocking, the restock count is 3
+2020-02-28 19:27:38 [root] INFO: Product <Vault by Vans Graphic Tee by Jim Goldberg Black> is restocking, the restock count is 3
+2020-02-28 19:27:38 [root] INFO: Product <Vans X Sandy Liang Bobo Bucket Hat Navy W> is restocking, the restock count is 1
+2020-02-28 19:27:38 [root] INFO: Product <Vault by Vans Graphic Tee by Jim Goldberg Red> is restocking, the restock count is 3
+2020-02-28 19:27:38 [root] INFO: Product <Vans X Sandy Liang Mimi Bike Shorts Midnight Navy W> is restocking, the restock count is 2
+2020-02-28 19:27:39 [root] INFO: Product <Retro Pile Fleece Jacket Black> is restocking, the restock count is 3
+2020-02-28 19:27:39 [root] INFO: Product <Vans X Sandy Liang Itty Polo T-Shirt Lotus W> is restocking, the restock count is 3
+2020-02-28 19:27:41 [root] INFO: Product <Vault by Vans OG Sk8 Hi LX by Jim Goldberg “Floral” U> is restocking, the restock count is 15
+2020-02-28 19:27:44 [root] INFO: Product <Vault by Vans OG Old Skool LX by Jim Goldberg “Black Acid Washed Denim”> is restocking, the restock count is 8
+2020-02-28 19:28:02 [root] INFO: Product <Chuck 70 OX Lo Top Sunflower / Black / Egret> is restocking, the restock count is 7
+2020-02-28 19:28:02 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-02-28 19:28:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 1,
+ 'downloader/request_bytes': 8729,
+ 'downloader/request_count': 27,
+ 'downloader/request_method_count/GET': 27,
+ 'downloader/response_bytes': 106358,
+ 'downloader/response_count': 26,
+ 'downloader/response_status_count/200': 26,
+ 'elapsed_time_seconds': 27.499848,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 2, 28, 11, 28, 2, 39376),
+ 'item_scraped_count': 25,
+ 'log_count/INFO': 36,
+ 'request_depth_max': 1,
+ 'response_received_count': 26,
+ 'retry/count': 1,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 1,
+ 'scheduler/dequeued': 27,
+ 'scheduler/dequeued/memory': 27,
+ 'scheduler/enqueued': 27,
+ 'scheduler/enqueued/memory': 27,
+ 'start_time': datetime.datetime(2020, 2, 28, 11, 27, 34, 539528)}
+2020-02-28 19:28:02 [scrapy.core.engine] INFO: Spider closed (finished)

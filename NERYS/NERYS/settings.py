@@ -110,7 +110,19 @@ CONCURRENT_REQUESTS_PER_IP = 100
 # 3). 禁止使用Cookies，减少CPU的使用率
 COOKIES_ENABLED = False
 # 4). 网页爬取失败禁止重试
-RETRY_ENABLED = False
+# RETRY_ENABLED = False
 # 5). 减少下载超时
 DOWNLOAD_TIMEOUT = 50
 # 6). 降低日志记录级别，减少CPU的使用率。  LOG_LEVEL = "WARNING"
+
+
+# 不遵从机器人协议:
+ROBOTSTXT_OBEY = False
+
+# 可以使403状态的响应不被自动忽略，可以自响应中对403 的响应做个性化处理
+HTTPERROR_ALLOWED_CODES = [403]
+
+# 超时重试
+RETRY_ENABLED = True
+RETRY_TIMES = 5
+
