@@ -1,6 +1,6 @@
 colorama==0.4.3
 fake-useragent==0.1.11
-lxml==4.4.1
+lxml==4.6.2
 requests==2.22.0
 schedule==0.6.0
 Scrapy==1.8.0
